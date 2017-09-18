@@ -1,25 +1,21 @@
 package com.thunderivenstudios.stackoverflowuser;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ImageView;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 
-import com.bumptech.glide.Glide;
-import com.thunderivenstudios.stackoverflowuser.api.ImageLoader;
+import com.thunderivenstudios.stackoverflowuser.mvp.base.activity.SingleFragmentActivity;
+import com.thunderivenstudios.stackoverflowuser.mvp.user.UserFragment;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
-public class MainActivity extends AppCompatActivity {
-    @BindView(R.id.image)
-    ImageView mImageView;
+public class MainActivity extends SingleFragmentActivity {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
-        new ImageLoader.Builder().load("https://www.gravatar.com/avatar/6d8ebb117e8d83d74ea95fbdd0f87e13?s=128&d=identicon&r=PG")
-                .scaleType(ImageLoader.ScaleType.CircleCrop)
-                .into(mImageView);
+        setTitle("Stack Overflow Users");
+    }
+
+    @Override
+    protected Fragment createFragment() {
+        return new UserFragment();
     }
 }

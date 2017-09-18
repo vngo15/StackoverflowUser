@@ -11,6 +11,6 @@ public interface BaseRecyclerViewPresenter extends BaseFragmentPresenter {
     int getNumberOfRow();
     BaseModel getModelAtPosition(int section, int row);
     void reloadData();
-    void loadMore(int page);
+    void loadMore();
     int getViewHolderViewType(int position);
 }

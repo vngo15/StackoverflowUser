@@ -21,8 +21,6 @@ import butterknife.ButterKnife;
 public abstract class SingleFragmentActivity extends BaseActivity {
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @BindView(R.id.title)
-    TextView mTitle;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,10 +44,5 @@ public abstract class SingleFragmentActivity extends BaseActivity {
     protected abstract Fragment createFragment();
     @LayoutRes int layoutId() {
         return R.layout.activity_single_fragment;
-    }
-
-    @Override
-    public void setTitle(CharSequence title) {
-        mTitle.setText(title);
     }
 }

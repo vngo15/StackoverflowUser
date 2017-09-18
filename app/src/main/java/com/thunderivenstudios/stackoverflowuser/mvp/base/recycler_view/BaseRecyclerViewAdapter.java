@@ -1,5 +1,6 @@
 package com.thunderivenstudios.stackoverflowuser.mvp.base.recycler_view;
 
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 
 import com.thunderivenstudios.stackoverflowuser.mvp.base.presenter.BaseRecyclerViewPresenter;
@@ -12,7 +13,7 @@ import com.thunderivenstudios.stackoverflowuser.mvp.base.presenter.BaseRecyclerV
 public abstract class BaseRecyclerViewAdapter<P extends BaseRecyclerViewPresenter> extends RecyclerView.Adapter<BaseRecyclerViewHolder<P>> {
     private P mPresenter;
 
-    public BaseRecyclerViewAdapter(P presenter) {
+    public BaseRecyclerViewAdapter(@NonNull P presenter) {
         mPresenter = presenter;
     }
 
@@ -23,6 +24,10 @@ public abstract class BaseRecyclerViewAdapter<P extends BaseRecyclerViewPresente
     @Override
     public void onBindViewHolder(BaseRecyclerViewHolder<P> holder, int position) {
         holder.loadData(position);
+        //pagination
+        if (position == mPresenter.getNumberOfRow() - 1) {
+            mPresenter.loadMore();
+        }
     }
 
     @Override

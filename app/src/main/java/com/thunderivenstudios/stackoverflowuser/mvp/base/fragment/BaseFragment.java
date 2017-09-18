@@ -1,5 +1,6 @@
 package com.thunderivenstudios.stackoverflowuser.mvp.base.fragment;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
@@ -85,6 +86,17 @@ public abstract class BaseFragment<P extends BaseFragmentPresenter> extends Frag
         if (mProgressDialog != null) {
             mProgressDialog.setMessage(message);
             mProgressDialog.show();
+        }
+    }
+
+    @Override
+    public void displayMessage(String title, String message) {
+        if (getActivity() != null) {
+            new AlertDialog.Builder(getActivity())
+                    .setTitle(title)
+                    .setMessage(message)
+                    .setIcon(0)
+                    .show();
         }
     }
     //endregion

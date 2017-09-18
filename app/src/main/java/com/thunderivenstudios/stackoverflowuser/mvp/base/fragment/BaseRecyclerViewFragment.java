@@ -7,13 +7,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 import com.thunderivenstudios.stackoverflowuser.R;
 import com.thunderivenstudios.stackoverflowuser.mvp.base.presenter.BaseRecyclerViewPresenter;
 import com.thunderivenstudios.stackoverflowuser.mvp.base.recycler_view.BaseRecyclerViewAdapter;
 import com.thunderivenstudios.stackoverflowuser.mvp.base.view.BaseRecyclerView;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by Vincent Ngo on 9/17/2017.

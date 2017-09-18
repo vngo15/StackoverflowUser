@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                             tools:ignore="RtlHardcoded">
+
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/loading"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintLeft_toRightOf="@+id/thumbnail"
+        app:layout_constraintTop_toTopOf="@+id/thumbnail"
+        android:textStyle="bold"
+        app:layout_constraintRight_toLeftOf="@+id/total"
+        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <TextView
+        android:id="@+id/gold_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="1"
+        android:drawablePadding="@dimen/margin_tiny"
+        android:drawableStart="@drawable/badge_gold"
+        android:drawableLeft="@drawable/badge_gold"
+        app:layout_constraintLeft_toRightOf="@+id/thumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        />
+
+    <TextView
+        android:id="@+id/silver_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="0dp"
+        android:text="1"
+        android:drawableStart="@drawable/badge_silver"
+        android:drawableLeft="@drawable/badge_silver"
+        android:drawablePadding="@dimen/margin_tiny"
+        app:layout_constraintLeft_toRightOf="@+id/gold_count"
+        app:layout_constraintTop_toTopOf="@+id/gold_count"/>
+
+    <TextView
+        android:id="@+id/bronze_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="0dp"
+        android:text="1"
+        android:drawablePadding="@dimen/margin_tiny"
+        android:drawableStart="@drawable/badge_bronze"
+        android:drawableLeft="@drawable/badge_bronze"
+        app:layout_constraintLeft_toRightOf="@+id/silver_count"
+        app:layout_constraintTop_toTopOf="@+id/silver_count"
+        app:layout_constraintRight_toLeftOf="@+id/total"
+        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/total_reputation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/total_reputation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/total"
+        app:layout_constraintLeft_toLeftOf="@+id/total"
+        app:layout_constraintRight_toRightOf="@+id/total"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20sp"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

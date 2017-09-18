@@ -11,7 +11,7 @@ import com.thunderivenstudios.stackoverflowuser.R;
  * ©Vincent Ngo. All rights reserved.
  *
  * Wrapper class for Glide and demonstrate the use of Builder Pattern.
- * It is also known as facade design pattern where we wrap the external library into a simple class for maintainability
+ * It is also known as facade design pattern where we wrap the external library into a simple class for maintainability.
  */
 
 public class ImageLoader {

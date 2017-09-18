@@ -2,4 +2,6 @@
 <resources>
     <dimen name="margin_large">16dp</dimen>
     <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_tiny">2dp</dimen>
+    <dimen name="badge_size">8dp</dimen>
 </resources>

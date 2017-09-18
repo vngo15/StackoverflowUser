@@ -7,8 +7,8 @@ import com.thunderivenstudios.stackoverflowuser.mvp.base.view.BaseRecyclerView;
  * Created by Vincent Ngo on 9/17/2017.
  * ©Vincent Ngo. All rights reserved.
  */
-
-public class BaseRecyclerViewPresenterImpl<V extends BaseRecyclerView> extends BaseFragmentPresenterImpl<V> implements BaseRecyclerViewPresenter {
+@SuppressWarnings("all")
+public abstract class BaseRecyclerViewPresenterImpl<V extends BaseRecyclerView> extends BaseFragmentPresenterImpl<V> implements BaseRecyclerViewPresenter {
     public BaseRecyclerViewPresenterImpl(V view) {
         super(view);
     }
@@ -35,8 +35,9 @@ public class BaseRecyclerViewPresenterImpl<V extends BaseRecyclerView> extends B
     }
 
     @Override
-    public void loadMore(int page) {}
+    public void loadMore() {}
 
+    //Determine the view type of the view holder
     @Override
     public int getViewHolderViewType(int position) {
         return 0;

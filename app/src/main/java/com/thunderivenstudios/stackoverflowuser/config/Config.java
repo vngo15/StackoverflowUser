@@ -9,4 +9,5 @@ public class Config {
     private Config() {}
 
     public static final String BASE_URL = "https://api.stackexchange.com/2.2/";
+    public static final String API_SITE = "stackoverflow";
 }

@@ -10,4 +10,5 @@ package com.thunderivenstudios.stackoverflowuser.mvp.base.view;
 public interface BaseFragmentView extends BaseView {
     void displayProgressDialog(String message);
     void dismissProgressDialog();
+    void displayMessage(String title, String message);
 }
