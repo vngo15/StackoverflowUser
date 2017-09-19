@@ -1,5 +1,9 @@
 package com.thunderivenstudios.stackoverflowuser.api;
 
+import com.thunderivenstudios.stackoverflowuser.application.UserApplication;
+import com.thunderivenstudios.stackoverflowuser.config.Config;
+
+import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -17,8 +21,11 @@ public class RetrofitFactory {
     public static Retrofit getRetrofit(String endpointUrl) {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        Cache cache = new Cache(UserApplication.instance().getCacheDir(),
+                Config.CACHE_SIZE);
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .addInterceptor(interceptor)
+                .cache(cache)
                 .build();
         return new Retrofit.Builder()
                 .baseUrl(endpointUrl)

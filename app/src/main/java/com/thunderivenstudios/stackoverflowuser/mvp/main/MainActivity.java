@@ -1,4 +1,4 @@
-package com.thunderivenstudios.stackoverflowuser;
+package com.thunderivenstudios.stackoverflowuser.mvp.main;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

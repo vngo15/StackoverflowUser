@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">StackoverflowUser</string>
     <string name="total_reputation">total reputation</string>
+    <string name="number_placeholder">1</string>
 </resources>
