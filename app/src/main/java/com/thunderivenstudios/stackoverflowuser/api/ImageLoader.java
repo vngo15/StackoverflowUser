@@ -29,7 +29,7 @@ public class ImageLoader {
         return new Builder(context);
     }
 
-    @SuppressWarnings("WeakerAccess")
+    @SuppressWarnings("all")
     public static class Builder {
         private String mUrl;
         private RequestOptions mOptions;

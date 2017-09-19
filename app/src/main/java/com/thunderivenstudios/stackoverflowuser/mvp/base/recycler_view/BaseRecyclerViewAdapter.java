@@ -13,7 +13,7 @@ import com.thunderivenstudios.stackoverflowuser.mvp.base.presenter.BaseRecyclerV
 public abstract class BaseRecyclerViewAdapter<P extends BaseRecyclerViewPresenter> extends RecyclerView.Adapter<BaseRecyclerViewHolder<P>> {
     private P mPresenter;
 
-    public BaseRecyclerViewAdapter(@NonNull P presenter) {
+    protected BaseRecyclerViewAdapter(@NonNull P presenter) {
         mPresenter = presenter;
     }
 

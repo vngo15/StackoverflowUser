@@ -14,7 +14,7 @@ import com.thunderivenstudios.stackoverflowuser.mvp.base.presenter.BaseRecyclerV
 public abstract class BaseRecyclerViewHolder<P extends BaseRecyclerViewPresenter> extends RecyclerView.ViewHolder {
     private P mPresenter;
 
-    public BaseRecyclerViewHolder(View itemView, P presenter) {
+    protected BaseRecyclerViewHolder(View itemView, P presenter) {
         super(itemView);
         mPresenter = presenter;
     }

@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.Toolbar;
-import android.widget.TextView;
 
 import com.thunderivenstudios.stackoverflowuser.R;
 
@@ -42,7 +41,7 @@ public abstract class SingleFragmentActivity extends BaseActivity {
     }
 
     protected abstract Fragment createFragment();
-    @LayoutRes int layoutId() {
+    protected @LayoutRes int layoutId() {
         return R.layout.activity_single_fragment;
     }
 }

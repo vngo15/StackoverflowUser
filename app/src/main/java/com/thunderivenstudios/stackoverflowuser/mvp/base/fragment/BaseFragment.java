@@ -24,8 +24,8 @@ import butterknife.Unbinder;
  */
 
 public abstract class BaseFragment<P extends BaseFragmentPresenter> extends Fragment implements BaseFragmentView {
-    protected ProgressDialog mProgressDialog;
-    protected P mPresenter;
+    private ProgressDialog mProgressDialog;
+    private P mPresenter;
     protected HashSet<Unbinder> mUnbinder = new HashSet<>();
 
     @Override
