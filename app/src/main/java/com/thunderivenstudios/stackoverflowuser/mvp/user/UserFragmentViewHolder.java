@@ -45,7 +45,7 @@ class UserFragmentViewHolder extends BaseRecyclerViewHolder<BaseRecyclerViewPres
     public void loadData(int position) {
         User user = (User) getPresenter().getModelAtPosition(0, position);
         if (user != null) {
-            new ImageLoader.Builder()
+            ImageLoader.with(getContext())
                     .load(user.getProfileImage())
                     .scaleType(ImageLoader.ScaleType.CenterInside)
                     .into(mThumbnail);

@@ -1,5 +1,6 @@
 package com.thunderivenstudios.stackoverflowuser.api;
 
+import android.content.Context;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -24,12 +25,22 @@ public class ImageLoader {
         CenterInside
     }
 
+    public static Builder with(Context context) {
+        return new Builder(context);
+    }
+
+    @SuppressWarnings("WeakerAccess")
     public static class Builder {
         private String mUrl;
         private RequestOptions mOptions;
+        private Context mContext;
 
-        public Builder() {
+        /**
+         * private init, only accessible via ImageLoader.with(Context context)
+         */
+        private Builder(Context context) {
             mOptions = new RequestOptions();
+            mContext = context;
         }
 
         public Builder load(String url) {
@@ -56,7 +67,7 @@ public class ImageLoader {
         }
 
         public void into(ImageView imageView) {
-            Glide.with(imageView.getContext())
+            Glide.with(mContext)
                     .load(mUrl)
                     .thumbnail(Glide.with(imageView.getContext()).load(R.drawable.loading)) // Loading gif
                     .apply(mOptions)
